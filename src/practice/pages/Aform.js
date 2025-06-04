@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import BetterButton from "../componets/BetterButton	";
+import BetterButton from "../componets/BetterButton";
 
 const Aform = () => {
 	const [nameInput, setNameInput] = useState("");
@@ -10,7 +10,7 @@ const Aform = () => {
 	const [stateInput, setStateInput] = useState("");
 
 	const handleSubmit = (e) => {
-		e.preventDefault(); // remove that semicolon after if
+		e.preventDefault()``
 		if (!nameInput.trim() || !ageInput || !emailInput.trim()) {
 			alert("Please fill out all fields correctly.");
 			return;

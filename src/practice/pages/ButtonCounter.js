@@ -4,7 +4,6 @@ import BetterButton from "../componets/BetterButton";
 function ButtonCounter() {
   const [count, setCount] = useState(0);
   const [history, setHistory] = useState([0]);
-//   const [decriment, setDecriment] = useState(0);
 
   const increment = () => {
     const next = count + 1;

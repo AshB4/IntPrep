@@ -1,6 +1,7 @@
 /** @format */
 
 import { Link } from "react-router-dom";
+import BetterCard from "../componets/BetterCard";
 
 const projects = [
 	{
@@ -33,27 +34,31 @@ const projects = [
 		path: "/form",
 		description: "Controlled chaos in input form.",
 	},
+	{
+		title:"Mars Rover Explorer",
+		path: "/mars-rover",
+		description: "Explore the Red Planet's photos and data.",
+	},
 ];
 
 export default function Home() {
 	return (
-		<div >
-			<h1>
-				🚀 Practice Playground
-			</h1>
-			<p>
-				Explore magical, cosmic, and experimental components below ✨
-			</p>
-			<div>
+		<div>
+			<h1>🚀 Practice Playground</h1>
+			<p>Explore magical, cosmic, and experimental components below ✨</p>
+			<br></br>
+			<div className="card-wrapper">
 				{projects.map(({ title, path, description }) => (
-					<Link
-						key={path}
-						to={path}>
-						<h2>{title}</h2>
-						<p>{description}</p>
-					</Link>
+					<BetterCard key={path}>
+						<Link to={path}>
+							<h2>{title}</h2>
+							<p>{description}</p>
+						</Link>
+					</BetterCard>
 				))}
 			</div>
+
+			<br></br>
 		</div>
 	);
 }
